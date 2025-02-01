@@ -37,6 +37,9 @@ async function initializeRooms() {
     }
 }
 initializeRooms();
+app.get('/',(req,res)=>{
+    res.send('Hello World!')
+})
 
 app.get("/rooms", async (req, res) => {
     const rooms = await Room.find();
